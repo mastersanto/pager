@@ -6,16 +6,15 @@
     "node": "12.13.x"
   },
   "scripts": {
-    "start": "webpack serve --config ./webpack.config.js --mode production",
-    "start:dev": "webpack serve --mode development",
-    "build": "webpack --env production",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "heroku-prebuild": "npm install --dev",
-    "heroku-postbuild": "npm run build"
+    "start": "npm run build && node server/index.js",
+    "start:dev": "webpack serve",
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jorge Sandoval",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.17.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
