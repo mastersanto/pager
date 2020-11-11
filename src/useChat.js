@@ -15,7 +15,8 @@ const useChat = (username) => {
 
   useEffect(() => {
     socketRef.current = io(ENDPOINT, {
-      reconnectionDelayMax: 10000,
+      pingInterval: 15000,
+      pingTimeout: 30000,
       query: { username },
       transports: ['websocket']
     });

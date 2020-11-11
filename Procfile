@@ -1,2 +1,2 @@
-heroku ps:scale web=0
-heroku ps:scale worker=1
+features:enable http-session-affinity
+ps:scale web=1
