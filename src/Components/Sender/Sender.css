@@ -1,0 +1,26 @@
+.sender {
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    height: 40px;
+}
+
+.sender-input {
+    line-height: 40px;
+    font-size: 14px;
+    padding: 0 10px;
+    width: calc(100% - 74px);
+    border: 0;
+}
+
+.sender-btn {
+    font-size: 14px;
+    border: none;
+    background-color: transparent;
+    padding: 10px;
+    cursor: pointer;
+    color: #888;
+}
+
+.sender-btn:hover {
+    color: #000;
+}

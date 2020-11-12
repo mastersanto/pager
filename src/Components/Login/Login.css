@@ -1,0 +1,30 @@
+.login {
+    padding: 40px;
+}
+
+.login-title {
+    font-size: 32px;
+    font-weight: 200;
+    margin: 0 0 40px;
+}
+
+.login-label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.login-input {
+    font-size: 14px;
+    line-height: 40px;
+    height: 40px;
+    padding: 0 10px;
+}
+
+.login-btn {
+    line-height: 40px;
+    font-size: 14px;
+    width: 100px;
+    align-self: flex-end;
+    margin-top: 40px;
+}

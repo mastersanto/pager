@@ -1,0 +1,42 @@
+.message {
+    display: flex;
+    margin-bottom: 24px;
+}
+
+.message:last-child {
+    padding-top: 24px;
+}
+
+.message-avatar {
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+    margin-right: 14px;
+    background-color: #eee;
+}
+
+.message-container {}
+
+.message-header {
+    margin-bottom: 4px;
+}
+
+.message-user {
+    font-size: 14px;
+    font-weight: 600;
+    margin-right: 7px;
+}
+
+.message-time {
+    font-size: 12px;
+    text-transform: lowercase;
+    color: #888;
+}
+
+.message-body {
+    font-size: 12px;
+}
+
+.message-image {
+    max-width: 100%;
+}

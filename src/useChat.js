@@ -28,7 +28,11 @@ const useChat = (username) => {
 
   useEffect(() => {
     socketRef.current.on(MESSAGE_EVENT, message => {
-      setMessages((messages) => [...messages, message]);
+      setMessages((messages) => {
+        return [...messages, message].sort(function(a, b) {
+          return (a.time < b.date) ? 1 : ((a.time > b.time) ? -1 : 0);
+        });
+      });
     });
 
     socketRef.current.on(IS_TYPING_EVENT, (typers) => {

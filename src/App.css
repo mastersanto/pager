@@ -1,0 +1,27 @@
+html,
+body {
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+#root {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    flex: 0 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 600px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}

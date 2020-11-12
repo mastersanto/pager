@@ -1,16 +1,20 @@
 import React from 'react'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from 'react-router-dom'
 
-// import './index.css'
-import Home from './Pages/Home/Home'
-import ChatRoom from './Pages/Chat/Chat'
+import './App.css'
+import Login from './Components/Login/Login'
+import ChatRoom from './Components/Chat/Chat'
 
 function App () {
   return (
       <Router>
         <Switch>
-          <Route exact path='/' component={Home} />
-          <Route exact path='/:username' component={ChatRoom} />
+          <Route exact path='/' component={Login} />
+          <Route path='/:username' component={ChatRoom} />
         </Switch>
       </Router>
   )
