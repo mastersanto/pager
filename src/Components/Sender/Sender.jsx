@@ -6,7 +6,7 @@ import Input from '../../Controls/Input/Input';
 const Sender = (props) => {
   const {
     newMessage,
-    handleNewMessageChange,
+    handleMessageChange,
     handleSendMessage
   } = props;
 
@@ -18,7 +18,7 @@ const Sender = (props) => {
             name='sender-input'
             placeholder='Message'
             value={newMessage}
-            onChange={handleNewMessageChange}
+            onChange={handleMessageChange}
         />
         <button
             onClick={handleSendMessage}
