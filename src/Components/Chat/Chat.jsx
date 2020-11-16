@@ -11,8 +11,7 @@ const GIPHY_API_URL = 'https://api.giphy.com/v1/gifs/random';
 const GIPHY_API_KEY = 'ktJkmpWs0jEhziOmJWLzDaQrJWOFmdCO';
 
 const Chat = (props) => {
-  // const { username } = props.match.params;
-  const username = 'test!';
+  const { username } = props.match.params;
   const { typers, sendTypingStatus } = useChat(username);
   const { messages, sendTextMessage, sendImageMessage } = useChat(username);
   const [newMessage, setNewMessage] = React.useState('');

@@ -13,7 +13,8 @@ function App () {
   return (
       <Router>
         <Switch>
-          <Route exact path='/' component={ChatRoom} />
+          <Route exact path='/' component={Login} />
+          <Route path='/:username' component={ChatRoom} />
         </Switch>
       </Router>
   )
