@@ -44,6 +44,10 @@ const useChat = (username) => {
     socketRef.current.emit(NEW_TEXT_MESSAGE_EVENT, message)
   };
 
+  const sendImageMessage = (message) => {
+    socketRef.current.emit(NEW_IMAGE_MESSAGE_EVENT, message);
+  };
+
   const sendTypingStatus = status => {
     socketRef.current.emit(TYPING_EVENT, status)
   };
@@ -52,6 +56,7 @@ const useChat = (username) => {
     messages,
     typers,
     sendTextMessage,
+    sendImageMessage,
     sendTypingStatus,
   }
 };
