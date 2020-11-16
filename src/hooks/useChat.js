@@ -1,20 +1,21 @@
 import { useRef, useEffect, useState } from 'react'
 import io from 'socket.io-client'
-
-const MESSAGE_EVENT = 'message';
-const NEW_TEXT_MESSAGE_EVENT = 'text-message';
-const NEW_IMAGE_MESSAGE_EVENT = 'image-message';
-const IS_TYPING_EVENT = 'is-typing';
-const TYPING_EVENT = 'typing';
+import {
+  WS_ENDPOINT,
+  MESSAGE_EVENT,
+  NEW_TEXT_MESSAGE_EVENT,
+  NEW_IMAGE_MESSAGE_EVENT,
+  IS_TYPING_EVENT,
+  TYPING_EVENT
+} from '../config';
 
 const useChat = (username) => {
-  const ENDPOINT = `https://pager-hiring.herokuapp.com/`;
   const [messages, setMessages] = useState([]);
   const [typers, setTypers] = useState({});
   const socketRef = useRef();
 
   useEffect(() => {
-    socketRef.current = io(ENDPOINT, {
+    socketRef.current = io(WS_ENDPOINT, {
       pingInterval: 15000,
       pingTimeout: 30000,
       query: { username },
@@ -24,7 +25,7 @@ const useChat = (username) => {
     return () => {
       socketRef.current.disconnect();
     };
-  }, [ENDPOINT, username]);
+  }, [WS_ENDPOINT, username]);
 
   useEffect(() => {
     socketRef.current.on(MESSAGE_EVENT, message => {

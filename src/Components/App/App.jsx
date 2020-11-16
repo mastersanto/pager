@@ -6,8 +6,8 @@ import {
 } from 'react-router-dom'
 
 import './App.css'
-import Login from './Components/Login/Login'
-import ChatRoom from './Components/Chat/Chat'
+import Login from '../Login/Login'
+import ChatRoom from '../Chat/Chat'
 
 function App () {
   return (

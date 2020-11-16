@@ -1,14 +1,12 @@
 import React from 'react'
 
 import './Chat.css';
-import getData from '../../getData';
-import useChat from '../../useChat';
+import getData from '../../utils/getData';
+import useChat from '../../hooks/useChat';
 import Sender from '../Sender/Sender';
 import Messages from '../../Controls/Messages/Messages';
 import Typers from '../../Controls/Typers/Typers';
-
-const GIPHY_API_URL = 'https://api.giphy.com/v1/gifs/random';
-const GIPHY_API_KEY = 'ktJkmpWs0jEhziOmJWLzDaQrJWOFmdCO';
+import { GIPHY_API_URL, GIPHY_API_KEY } from '../../config';
 
 const Chat = (props) => {
   const { username } = props.match.params;
@@ -26,8 +24,6 @@ const Chat = (props) => {
   };
 
   const handleSendMessage = async (event) => {
-    console.log('>>>>>>> handleSendMessage');
-
     if (newMessage.includes('/giphy')) {
       const tag = newMessage.replace('/giphy ', '');
       const url = `${GIPHY_API_URL}?api_key=${GIPHY_API_KEY}&tag=${tag || ''}`;
